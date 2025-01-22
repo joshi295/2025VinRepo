@@ -57,7 +57,7 @@ public class LwcDataTableClassToFetchContacts {
         
         Account objAcc = new Account();
         objAcc.Id = accId;
-        objAcc.Primary_Contact__c = contactRowId;
+        objAcc.PrimaryContact__c = contactRowId;
         
         accountToUpdate.add(objAcc);
         
