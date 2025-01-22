@@ -1,0 +1,76 @@
+:host(){
+
+    --dark-blue : #0b0d21;
+    --light-white : #fafafa;
+    --light-blue : #4f7df9;
+    --light-pink : #e92e63;
+    --dull-blue : #1d1e33;
+    --size-16 : 16px;
+    --size-14 : 14px;
+    --size-12 : 12px;
+}
+
+
+.box{
+    border-radius: 38px;
+    max-width: 420px;
+    text-align: center;
+    margin: auto;
+    background: var(--dark-blue);
+    color: var(--light-white);
+    padding: var(--size-16);
+}
+h1{
+    font-size: 36px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+/*
+now most of the css properties you are gonna use it again and again
+so we can create variable in css and then use it wherever necessary
+  :host is nothing but it is representing our component
+  to use it in css class
+  use like-   var(--variable name)
+  */
+
+.info-wrapper{
+    background: var(--dull-blue);
+    padding: var(--size-16);
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    font-size: var(--size-14);
+    text-align: center;
+}
+h2{
+    font-size: 26px;
+    color: var(--light-pink);
+}
+h3{
+    font-weight: bold;
+}
+.app{
+    min-height: 100vh;
+    background-image: url(/sfsites/c/resource/BmiAppBackground);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+label{
+    font-size: 20px;
+    color: var(--light-white);
+}
+input{
+    color: var(--dull-blue);
+    padding: 8px;
+    font-size: var(--size-16);
+}
+.custom-button{
+    font-size: var(--size-16);
+    padding: var(--size-12);
+    color:  var(--light-white);
+    background: var(--light-pink );
+    border-color: var(--light-pink);
+}
+.result-value{
+    color: yellow;
+    font-size: 30px;
+}

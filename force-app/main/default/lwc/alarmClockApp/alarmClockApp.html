@@ -1,0 +1,65 @@
+<template>
+  <div class="container">
+<div class="alaram-card">
+  <h1>Alarm Clock</h1>
+  <img src={clockImage} alt="Clock Image" height="200px" width="200px" class={shakeImage}>
+  <h2>{currentTime}</h2>
+
+  <div class="slds-grid slds-gutters">
+    <div class="slds-col">
+      <c-clock-dropdown label="Hour(s)" option={hour} unique-id="select-hour" onoptionhandler={optionhandler}></c-clock-dropdown>
+      <!-- Instead of using these, we can define all in child component and call in parent
+       <div class="slds-form-element">
+        <label class="slds-form-element__label custom-label" for="select-minutes">Minute(S)</label>
+        <div class="slds-form-element__control">
+        <div class="slds-select_container">
+        <select class="slds-select custom-select" id="select-minutes">
+        <option value="">Select…</option>
+        <template for:each={minute} for:item="minutes">
+          <option value={minutes} key={minutes}>{minutes}</option>
+        </template>
+        </select>
+        </div>
+        </div>
+        </div>-->
+    </div>
+    <div class="slds-col">
+      <c-clock-dropdown label="Minutes(s)" option={minute} unique-id="select-minute" onoptionhandler={optionhandler}></c-clock-dropdown>
+    </div>
+    <div class="slds-col">
+      <c-clock-dropdown label="AM/PM" option={meridiems} unique-id="select-meridiems" onoptionhandler={optionhandler}></c-clock-dropdown>
+
+      <!--
+      <div class="slds-form-element">
+        <label class="slds-form-element__label custom-label" for="select-AM/PM">AM/PM</label>
+        <div class="slds-form-element__control">
+        <div class="slds-select_container">
+        <select class="slds-select custom-select" id="select-AM/PM">
+        <option value="">Select…</option>
+        <template for:each={meridiems} for:item="meri">
+          <option value={meri} key={meri}>{meri}</option>
+        </template>
+        
+        //<option>AM</option> These lines are also fine but never hardcode the data
+        <option>PM</option> These lines are also fine but never hardcode the data>
+           
+        </select>
+        </div>
+        </div>
+        </div>
+      -->
+    </div>
+  </div>
+  <template if:false={isAlarmSet}>
+    <button class="slds-button slds-button_neutral slds-button_stretch" disabled={isFieldNotSelected} 
+    onclick={setAlarmHandler}>
+    Set Alarm</button>
+  </template>
+  
+  <template if:true={isAlarmSet}>
+  <button class="slds-button slds-button_neutral slds-button_stretch" onclick={clearAlarmHandler}>
+    Clear Alarm</button>
+  </template>
+</div>
+</div>
+</template>

@@ -1,0 +1,15 @@
+<template>
+  <div class="slds-form-element">
+    <label class="slds-form-element__label custom-label" for={uniqueId}>{label}</label>
+     <div class="slds-form-element__control">
+       <div class="slds-select_container">
+          <select class="slds-select custom-select" id={uniqueId} onchange={ChangeHandler}>
+           <option value="">Select…</option>
+               <template for:each={option} for:item="options">
+               <option value={options} key={options}>{options}</option>
+              </template>
+         </select>
+        </div>
+      </div>
+    </div>
+</template>

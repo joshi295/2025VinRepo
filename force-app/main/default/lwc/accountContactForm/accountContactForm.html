@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="Account and Contact Creation">
+   <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-2">
+            <lightning-input label="Account Name" value={accountName} onchange={handleAccountNameChange}></lightning-input>
+            <lightning-input type="number" label="Account Phone" value={accountPhone} onchange={handleAccountPhoneChange}></lightning-input>
+            <lightning-input label="Account Industry" value={accountindustry} onchange={handleAccountindustryChange}></lightning-input>
+            <lightning-input label="Account Description" value={accountDescription} onchange={handleAccountDescriptionChange}></lightning-input>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+         <lightning-input label="Contact LastName" value={contactLastName} onchange={handleContactLastNameChange}></lightning-input>
+         <lightning-input label="Contact Phone" value={contactPhone} onchange={handleContactPhoneChange}></lightning-input>
+         <!--<lightning-input label="Con Account Name" value={conAccName} onchange={handleconAccName}></lightning-input> -->
+        </br>
+         <div class="slds-text-heading_Medium"> Account Name is {accountName}</div>
+         <div class="slds-text-heading_Medium"> Account Phone is {accountPhone}</div>
+         <div class="slds-text-heading_Medium"> Account Industry is {accountindustry}</div>
+         <div class="slds-text-heading_Medium"> Account Description {accountDescription}</div>
+        
+        </div>
+        
+    </div>   
+    <lightning-button label="Save" variant="brand" onclick={handleOnClick}></lightning-button>
+      </lightning-card>
+</template>

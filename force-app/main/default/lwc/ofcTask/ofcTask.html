@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Account and Opportunity Form">
+        <div class="slds-grid slds-wrap">
+            <!-- Account Fields -->
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input label="Account Name" data-id="accountName" value={accountName} onchange={handleInputChange}></lightning-input>
+                <lightning-input label="Account Phone" data-id="accountPhone" value={accountPhone} onchange={handleInputChange}></lightning-input>
+                <lightning-input label="Account Website" data-id="accountWebsite" value={accountWebsite} onchange={handleInputChange}></lightning-input>
+                <lightning-input label="Account Industry" data-id="accountIndustry" value={accountIndustry} onchange={handleInputChange}></lightning-input>
+                <lightning-input label="Account Description" data-id="accountDescription" value={accountDescription} onchange={handleInputChange}></lightning-input>
+            </div>
+
+            <!-- Opportunity Fields -->
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input label="Opportunity Name" data-id="opportunityName" value={opportunityName} onchange={handleInputChange}></lightning-input>
+                <lightning-input label="Opportunity Stage" data-id="opportunityStage" value={opportunityStage} onchange={handleInputChange}></lightning-input>
+                <lightning-input label="Opportunity Amount" data-id="opportunityAmount" value={opportunityAmount} onchange={handleInputChange}></lightning-input>
+                <lightning-input label="Opportunity Close Date" data-id="opportunityCloseDate" value={opportunityCloseDate} onchange={handleInputChange} type="date"></lightning-input>
+                <lightning-input label="Opportunity Description" data-id="opportunityDescription" value={opportunityDescription} onchange={handleInputChange}></lightning-input>
+            </div>
+        </div>
+        <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+    </lightning-card>
+</template>
